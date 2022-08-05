@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const convertSass = require("sass-folder-converter");
+const fileUpload = require('express-fileupload');
 
 //TODO : https://www.npmjs.com/package/express-mailer
 
@@ -33,6 +34,10 @@ server.use(require("express-session")({
     cookie: { 
         secure: false // set in true if the website use https 
     }
+}));
+
+server.use(fileUpload({
+    createParentPath: true
 }));
 
 // Add body parser middleware for get body content (for post method) :

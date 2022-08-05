@@ -2,7 +2,7 @@
   "name": "express-website-template",
   "version": "1.0.0",
   "main": "server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "node .",
     "dev": "nodemon -e js,scss,ejs,json ."
@@ -14,7 +14,10 @@
     "express-session": "^1.17.1",
     "morgan": "~1.9.1",
     "sass": "^1.26.10",
-    "sass-folder-converter": "^1.0.3"
+    "sass-folder-converter": "^1.0.3",
+    "mongodb": "4.8.1",
+    "mongoose": "^5.0.0",
+    "express-fileupload": "^1.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
